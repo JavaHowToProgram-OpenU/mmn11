@@ -1,4 +1,6 @@
 /** mmn11-1a
+ * @author Gad Maor
+ * @version 1.0
  * Represents a cash register in a department store. Collects customer's account details, calculates total purchase sum,
  * receives payment and returns change to the customer and calculates total purchase sum for all buyers.
  */
