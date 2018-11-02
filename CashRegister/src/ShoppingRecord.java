@@ -27,23 +27,42 @@ public class ShoppingRecord {
      *                      Methods                       *
      *****************************************************/
 
-    // Getter method for item field
+    /** Getter method for item field
+     *
+     * @return - the Item belonging to this ShoppingRecord
+     */
     public Item getItem() {
         return item;
     }
-    // Setter method for item field
+
+    /** Setter method for item field
+     *
+     * @param item the Item to set for this ShoppingRecord
+     */
     public void setItem(Item item) {
         this.item = item;
     }
-    // Getter method for amount field
+
+    /** Getter method for amount field
+     *
+     * @return - The amount of Item in this ShoppingRecord
+     */
     public int getAmount() {
         return amount;
     }
-    // Setter method for amount field
+
+    /** Setter method for amount field
+     *
+     * @param amount The amount of Item to set for this ShoppingRecord
+     */
     public void setAmount(int amount) {
         this.amount = amount;
     }
-    // Getter method for totalPrice field
+
+    /** Getter method for totalPrice field
+     *
+     * @return - The total sum of this ShoppingRecord. Calculated as amount of Item times price of Item
+     */
     public double getTotalPrice() {
         return totalPrice;
     }

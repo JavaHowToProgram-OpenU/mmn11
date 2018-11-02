@@ -28,19 +28,34 @@ public class CashRegister {
      *                      Methods                       *
      *****************************************************/
 
-    // Getter method for totalSum field
+    /** Getter method for totalSum field
+     *
+     * @return - The total sum of money in this CashRegister
+     */
     public static double getTotalSum() {
         return totalSum;
     }
-    // Setter method for totalSum field
+
+    /** Setter method for totalSum field
+     *
+     * @param totalSum set the amount of money in this CashRegister
+     */
     public static void setTotalSum(double totalSum) {
         CashRegister.totalSum = totalSum;
     }
-    // Getter method for currenSum field
+
+    /** Getter method for currentSum field
+     *
+     * @return - The sum for the current customer's account
+     */
     public double getCurrentSum() {
         return currentSum;
     }
-    // Setter method for currenSum field
+
+    /** Setter method for currentSum field
+     *
+     * @param currentSum The sum to set for the current customer's account
+     */
     public void setCurrentSum(double currentSum) {
         this.currentSum = currentSum;
     }
