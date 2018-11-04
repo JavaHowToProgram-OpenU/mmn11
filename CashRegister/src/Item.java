@@ -59,10 +59,7 @@ public class Item {
         this.price = price;
     }
 
-    /*public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
-    }*/
+    public String toString() {
+        return String.format("%-15s%15.2f$", this.getName(), this.getPrice());
+    }
 }

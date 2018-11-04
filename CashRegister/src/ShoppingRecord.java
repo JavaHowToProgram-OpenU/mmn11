@@ -40,30 +40,12 @@ public class ShoppingRecord {
     }
 
     /**
-     * Setter method for item field
-     *
-     * @param item the Item to set for this ShoppingRecord
-     */
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
-    /**
      * Getter method for amount field
      *
      * @return - The amount of Item in this ShoppingRecord
      */
     public int getAmount() {
         return amount;
-    }
-
-    /**
-     * Setter method for amount field
-     *
-     * @param amount The amount of Item to set for this ShoppingRecord
-     */
-    public void setAmount(int amount) {
-        this.amount = amount;
     }
 
     /**
@@ -81,6 +63,6 @@ public class ShoppingRecord {
      * @return - This ShoppingRecord
      */
     public String toString() {
-        return String.format("%-15s%8d%15.2f$%n", item.getName(), amount, totalPrice);
+        return String.format("%-15s%8d%15.2f$%n", getItem().getName(), getAmount(), getTotalPrice());
     }
 }

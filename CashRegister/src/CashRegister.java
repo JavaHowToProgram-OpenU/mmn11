@@ -11,19 +11,16 @@ public class CashRegister {
     /******************************************************
      *                      Fields                        *
      *****************************************************/
-    // total amount of money in the CashRegister
+    // Total amount of money in the CashRegister
     private static double totalSum;
-    //
+    // Total sum of purchase for current customer
     private double currentSum;
-    // ArrayList representing the current customer's shopping list(account).
-    private ArrayList<ShoppingRecord> shoppingList = new ArrayList<>();
 
     /******************************************************
      *                      Constructors                  *
      *****************************************************/
     // An empty constructor - empty CashRegister
     public CashRegister() {
-
     }
     // A constructor for a CashRegister containing an initial amount of money
     public CashRegister(double initialSum) {
@@ -38,16 +35,16 @@ public class CashRegister {
      *
      * @return - The total sum of money in this CashRegister
      */
-    public static double getTotalSum() {
-        return totalSum;
+    public double getTotalSum() {
+        return CashRegister.totalSum;
     }
 
-    /** Setter method for totalSum field
+    /** Set the totalSum of money in the CashRegister
      *
-     * @param totalSum set the amount of money in this CashRegister
+     * @param sum sum to set as the total amount of money in this CashRegister
      */
-    public static void setTotalSum(double totalSum) {
-        CashRegister.totalSum = totalSum;
+    public void setTotalSum(double sum) {
+        CashRegister.totalSum = sum;
     }
 
     /** Getter method for currentSum field
@@ -60,10 +57,10 @@ public class CashRegister {
 
     /** Calculates total purchase sum for current customer
      *
-     * @param currentSum The sum to set for the current customer's account
+     * @param record The ShoppingRecord record from which to add the record totalPrice
      */
-    public void setCurrentSum(double sum) {
-        this.currentSum += sum;
+    public void calcCurrentSum(ShoppingRecord record) {
+            this.currentSum += record.getTotalPrice();
     }
     /** Adds an item to the currect customer's shoppingList.
      * Creates a new ShoppingRecord object with the given parameters and adds it to the shoppingList.
@@ -71,44 +68,43 @@ public class CashRegister {
      * @param item The item to add to this shoppingList
      * @param amount The amount of item to add to this shoppingList
      */
-    public void addItem(Item item, int amount) {
+    public void addItem(Item item, int amount, ArrayList<ShoppingRecord> shoppingList) {
         ShoppingRecord record = new ShoppingRecord(item, amount);
         shoppingList.add(record);
-        currentSum += record.getTotalPrice();
+        calcCurrentSum(record);
 
     }
     /** Returns the current customer's shoppingList
      *
      * @return - This customer's shoppingList
      */
-    public String getShoppingList() {
+    public String getShoppingList(ArrayList<ShoppingRecord> shoppingList) {
         String result = "Shopping List details:\n\n" +
         String.format("%-15s%10s%15s%n", "Item", "Amount", "Total Price") +
         "----------------------------------------\n";
-        for (ShoppingRecord item : shoppingList)
-            result += item;
+        for (ShoppingRecord record : shoppingList)
+            result += record;
+        result += "\n" + "Total shopping cart price: " + getCurrentSum() + "$\n";
         return result;
     }
-    public double getPayment(double payment){
+    public double getPayment(double payment, ArrayList<ShoppingRecord> shoppingList){
         double change;
         // Customer doesn't have enough money - give him back his money and send him on his way
-        if (payment < currentSum) {
+        if (payment < getCurrentSum()) {
             System.out.println("Insufficient funds. Come back when you have some more money.");
             return payment;
         }
         else {
             // No money in CashRegister, or not enough for change
-            if (getTotalSum() < payment - currentSum) {
+            if (getTotalSum() < payment - getCurrentSum()) {
                 System.out.println("Not enough change in CashRegister. Please use exact change!");
                 return payment;
             }
             // Calculate change
-            change = payment - currentSum;
+            change = payment - getCurrentSum();
             // Update CashRegister's totalSum
             setTotalSum(getTotalSum() + payment - change);
         }
-        // Print shoppingList for customer
-        System.out.println(getShoppingList());
         // Reset shoopingList for next customer
         shoppingList.clear();
         return change;
