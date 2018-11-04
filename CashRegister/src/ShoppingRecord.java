@@ -1,14 +1,15 @@
 /** Represents a single line in the shopping account of a customer
- *
+ * @author Gad Maor
+ * @version 1.0
  */
 public class ShoppingRecord {
 
     /******************************************************
      *                      Fields                        *
      *****************************************************/
-    // A single Item
+    // The Item of this ShoppingRecord
     private Item item;
-    // Amount of Item
+    // Amount of Item in this ShoppingRecord
     private int amount;
     // Total price of ShoppingRecord - depends on at least one Item created
     private double totalPrice;
@@ -16,7 +17,7 @@ public class ShoppingRecord {
     /******************************************************
      *                      Constructors                  *
      *****************************************************/
-    // instantiate ShoppingRecord with given Item, amount amd calculate totalPrice of ShoppingRecord
+    // Instantiate ShoppingRecord with given Item, amount amd calculate totalPrice of ShoppingRecord
     public ShoppingRecord(Item item, int amount) {
         this.item = item;
         this.amount = amount;
@@ -67,4 +68,10 @@ public class ShoppingRecord {
         return totalPrice;
     }
 
+    /**
+     * Prints this ShoppingRecord's details
+     */
+    public void printShoppingRecord() {
+        System.out.printf("%-10s%8d%15.2f$%n", getItem().getName(), getAmount(), getTotalPrice());
+    }
 }

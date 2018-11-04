@@ -1,5 +1,6 @@
 /** Represents an item in the department store
- *
+ * @author Gad Maor
+ * @version 1.0
  */
 
 public class Item {
@@ -57,4 +58,11 @@ public class Item {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    /*public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }*/
 }
