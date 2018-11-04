@@ -1,4 +1,6 @@
-/** Represents a single line in the shopping account of a customer
+/**
+ * Represents a single line in the shopping account of a customer
+ *
  * @author Gad Maor
  * @version 1.0
  */
@@ -28,7 +30,8 @@ public class ShoppingRecord {
      *                      Methods                       *
      *****************************************************/
 
-    /** Getter method for item field
+    /**
+     * Getter method for item field
      *
      * @return - the Item belonging to this ShoppingRecord
      */
@@ -36,7 +39,8 @@ public class ShoppingRecord {
         return item;
     }
 
-    /** Setter method for item field
+    /**
+     * Setter method for item field
      *
      * @param item the Item to set for this ShoppingRecord
      */
@@ -44,7 +48,8 @@ public class ShoppingRecord {
         this.item = item;
     }
 
-    /** Getter method for amount field
+    /**
+     * Getter method for amount field
      *
      * @return - The amount of Item in this ShoppingRecord
      */
@@ -52,7 +57,8 @@ public class ShoppingRecord {
         return amount;
     }
 
-    /** Setter method for amount field
+    /**
+     * Setter method for amount field
      *
      * @param amount The amount of Item to set for this ShoppingRecord
      */
@@ -60,7 +66,8 @@ public class ShoppingRecord {
         this.amount = amount;
     }
 
-    /** Getter method for totalPrice field
+    /**
+     * Getter method for totalPrice field
      *
      * @return - The total sum of this ShoppingRecord. Calculated as amount of Item times price of Item
      */
@@ -69,9 +76,11 @@ public class ShoppingRecord {
     }
 
     /**
-     * Prints this ShoppingRecord's details
+     * Returns this ShoppingRecord's details
+     *
+     * @return - This ShoppingRecord
      */
-    public void printShoppingRecord() {
-        System.out.printf("%-10s%8d%15.2f$%n", getItem().getName(), getAmount(), getTotalPrice());
+    public String toString() {
+        return String.format("%-15s%8d%15.2f$%n", item.getName(), amount, totalPrice);
     }
 }
