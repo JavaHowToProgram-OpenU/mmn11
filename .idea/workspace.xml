@@ -7,10 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a40c875-5336-441a-b8f5-243d55095311" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CashRegister/src/CashRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/CashRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CashRegister/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CashRegister/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +39,8 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="62" column="80" selection-start-line="62" selection-start-column="80" selection-end-line="62" selection-end-column="80" />
+            <state relative-caret-position="502">
+              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -51,8 +48,8 @@
       <file leaf-file-name="CashRegisterDriver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -278,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541338768759</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Middle of part b of Q1">
+      <created>1541374330908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541374330908</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -287,12 +291,12 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32786885" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Run Dashboard" order="7" weight="0.29405737" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="7" visible="true" weight="0.29405737" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32991803" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -323,7 +327,8 @@
     <MESSAGE value="Adding JavaDoc documentation to classes" />
     <MESSAGE value="Adds lots o' changes" />
     <MESSAGE value="Done with part a of Q1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with part a of Q1" />
+    <MESSAGE value="Middle of part b of Q1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Middle of part b of Q1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
@@ -431,15 +436,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="62" column="80" selection-start-line="62" selection-start-column="80" selection-end-line="62" selection-end-column="80" />
+        <state relative-caret-position="502">
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="270">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
