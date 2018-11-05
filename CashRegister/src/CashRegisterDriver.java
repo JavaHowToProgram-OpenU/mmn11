@@ -49,7 +49,17 @@ public class CashRegisterDriver {
                     System.out.println(cr.getShoppingList(shoppingList));
                     break;
                 case 2:
-
+                    System.out.println("Here's your shopping list:");
+                    System.out.println(cr.getShoppingList(shoppingList));
+                    System.out.print("Please input payment in dollars: ");
+                    double payment = input.nextDouble();
+                    System.out.println("You input " + payment + "$.\n");
+                    double change = cr.getPayment(payment, shoppingList);
+                    System.out.println("Thank you. Your change is: " + change + "$.\n");
+                    System.out.println("Cash register current balance is: " + cr.getTotalSum() + "$.\n");
+                    System.out.println( "Thank you for shopping OpenU-Mart.\n" +
+                                        "Come back again!.\n" +
+                                        "Next customer, please!\n");
                     break;
                 case 3:
                     System.out.println( "Cancelling purchase.\n" +
@@ -61,21 +71,6 @@ public class CashRegisterDriver {
                     break;
             }
         }
-        // getShoppingList(shoppingList);
-        /*Item pen = new Item("Pen", 2.5);
-        Item notebook = new Item("Notebook", 5);
-        Item tShirt = new Item("T-Shirt", 20);
-        Item screwdriver = new Item("Screwdriver", 15.75);
-        cr.addItem(pen, 10,shoppingList);
-        cr.addItem(notebook, 5,shoppingList);
-        cr.addItem(tShirt, 5,shoppingList);
-        cr.addItem(screwdriver, 3,shoppingList);
-        double payment = 200;
-        // Print shoppingList for customer
-        System.out.println(cr.getShoppingList(shoppingList));
-        //System.out.println("Total: $" + cr.getCurrentSum());
-        System.out.println("You paid: " + payment + "$\n" + "Your change is: " + cr.getPayment(payment,shoppingList) + "$");
-        System.out.printf("Cash Register now has %.2f$ left.", cr.getTotalSum());*/
     }
 
     /** Prints a welcome message for the store
@@ -111,14 +106,26 @@ public class CashRegisterDriver {
                             "4) End OpenU-Mart store program.\n");
         System.out.print("Enter selection: ");
     }
+
+    /**
+     * @param inventory The inventory array from which to display the items
+     * @param input The Scanner input object to get input from the user
+     * @return - The item number selected by the user(shifted +1 from the array's indices)
+     */
     public static int getItemSelection(Item[] inventory, Scanner input) {
-        System.out.println("Please select which item you'd like to purchase from the following list.\n");
+        System.out.println("Please select which item you'd like to purchase from the following list:\n");
         for (int counter = 1; counter < inventory.length + 1; ++counter) {
             System.out.printf("%2d)%s%n", counter, inventory[counter - 1]);
         }
         System.out.print("Enter selection: ");
         return input.nextInt();
     }
+
+    /**
+     * @param itemName The name of the selected item to get amount for
+     * @param input The Scanner input object to get input from the user
+     * @return - The amount of item input by the user
+     */
     public static int getAmount(String itemName, Scanner input) {
         System.out.printf("Please enter the amount of %ss you'd like to purchase: ", itemName);
         return input.nextInt();
