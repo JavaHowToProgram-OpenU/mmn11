@@ -60,6 +60,6 @@ public class Item {
     }
 
     public String toString() {
-        return String.format("%-15s%15.2f$", this.getName(), this.getPrice());
+        return String.format("%-15s%10.2f$", this.getName(), this.getPrice());
     }
 }

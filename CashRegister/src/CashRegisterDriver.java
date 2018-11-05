@@ -33,18 +33,33 @@ public class CashRegisterDriver {
                 break;
         }
         System.out.printf("Cash register initialized with %.2f$.%n%n", cr.getTotalSum());
-        // Main Cash Register function - get shoppingList, payment and continue with next customer
-        while (true) {
-            // Get items until customer inputs -1
-            // printStoreMenu();
-            do {
-                selection = getItemSelection(inventory, input);
-                if (selection == -1 )
+        /*  Main Cash Register function - get shoppingList, payment and continue with next customer
+            Ends when customer selects option no. 4.
+         */
+        while (selection != 4) {
+            printStoreMenu();
+            selection = input.nextInt();
+            switch (selection) {
+                case 1:
+                    int itemSelection = getItemSelection(inventory, input);
+                    int amount = getAmount(inventory[itemSelection - 1].getName(), input);
+                    cr.addItem(inventory[itemSelection - 1], amount, shoppingList);
+                    System.out.println(amount + " " + inventory[itemSelection - 1].getName() +
+                                        "s were successfully added to shopping list.\n");
+                    System.out.println(cr.getShoppingList(shoppingList));
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    System.out.println( "Cancelling purchase.\n" +
+                                         "Next customer, please!\n");
+                    shoppingList.clear();
                     continue;
-                int amount = getAmount(inventory[selection].getName(), input);
-                System.out.println("You've chosen to purchase: " + amount + " " + inventory[selection].getName() + "s.\n");
-            } while (selection != -1);
-            break;
+                case 4:
+                    System.out.println("Goodbye!\n");
+                    break;
+            }
         }
         // getShoppingList(shoppingList);
         /*Item pen = new Item("Pen", 2.5);
@@ -75,7 +90,7 @@ public class CashRegisterDriver {
     /** Prints the CashRegister initialization request
      *
      */
-    public static void printCashRegisterInitializationMessage(){
+    public static void printCashRegisterInitializationMessage() {
         System.out.println("You must first initialize the Cash Register service.\n" +
                            "Please choose one of the following options:\n" +
                            "1) Initialize an empty Cash Register.\n" +
@@ -85,11 +100,21 @@ public class CashRegisterDriver {
         //System.out.println("Please select the requested operation from the following menu(type numeric selection): \n");
 
     }
+
+    /** Prints the store's main menu
+     */
+    public static void printStoreMenu() {
+        System.out.println( "Please choose an action form the following menu:\n\n" +
+                            "1) Add products to shopping list.\n" +
+                            "2) Finish adding products to shopping list and go to payment.\n" +
+                            "3) Cancel purchase.\n" +
+                            "4) End OpenU-Mart store program.\n");
+        System.out.print("Enter selection: ");
+    }
     public static int getItemSelection(Item[] inventory, Scanner input) {
-        System.out.println("Please select which item you'd like to purchase from the following list.\n" +
-                           "Enter -1 to finish selection and go to payment.\n");
-        for (int counter = 0; counter < inventory.length; ++counter) {
-            System.out.println(counter + ")" + inventory[counter]);
+        System.out.println("Please select which item you'd like to purchase from the following list.\n");
+        for (int counter = 1; counter < inventory.length + 1; ++counter) {
+            System.out.printf("%2d)%s%n", counter, inventory[counter - 1]);
         }
         System.out.print("Enter selection: ");
         return input.nextInt();

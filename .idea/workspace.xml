@@ -8,6 +8,7 @@
     <list default="true" id="1a40c875-5336-441a-b8f5-243d55095311" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CashRegister/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/Item.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="CashRegister.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="59" column="86" selection-start-line="59" selection-start-column="86" selection-end-line="59" selection-end-column="86" />
+            <state relative-caret-position="202">
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -40,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
-              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+              <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -48,8 +49,8 @@
       <file leaf-file-name="CashRegisterDriver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="292">
+              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,6 +66,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>new</find>
+      <find>counter</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -282,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541374330908</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adds item input loops and methods">
+      <created>1541377867950</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541377867950</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -328,7 +342,8 @@
     <MESSAGE value="Adds lots o' changes" />
     <MESSAGE value="Done with part a of Q1" />
     <MESSAGE value="Middle of part b of Q1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Middle of part b of Q1" />
+    <MESSAGE value="Adds item input loops and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds item input loops and methods" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
@@ -420,13 +435,6 @@
     <entry file="file://$PROJECT_DIR$/../CashRegister/production/CashRegister/CashRegisterDriver.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="59" column="86" selection-start-line="59" selection-start-column="86" selection-end-line="59" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
@@ -434,17 +442,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
-          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="292">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
