@@ -99,7 +99,7 @@ public class CashRegisterDriver {
     /** Prints the store's main menu
      */
     public static void printStoreMenu() {
-        System.out.println( "Please choose an action form the following menu:\n\n" +
+        System.out.println( "Please choose an action from the following menu:\n\n" +
                             "1) Add products to shopping list.\n" +
                             "2) Finish adding products to shopping list and go to payment.\n" +
                             "3) Cancel purchase.\n" +

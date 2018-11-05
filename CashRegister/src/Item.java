@@ -16,8 +16,11 @@ public class Item {
     /******************************************************
      *                      Constructors                  *
      *****************************************************/
-
-    // Instantiate Item with name and price
+    /** Instantiate Item with name and price
+     *
+     * @param name The name of this Item
+     * @param price The price for this Item
+     */
     public Item(String name, double price) {
         this.name = name;
         this.price = price;

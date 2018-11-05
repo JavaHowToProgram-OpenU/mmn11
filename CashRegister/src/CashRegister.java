@@ -19,10 +19,15 @@ public class CashRegister {
     /******************************************************
      *                      Constructors                  *
      *****************************************************/
-    // An empty constructor - empty CashRegister
+    /** An empty constructor - instantiate an empty CashRegister
+     *
+     */
     public CashRegister() {
     }
-    // A constructor for a CashRegister containing an initial amount of money
+    /** A constructor for instantiating a CashRegister containing an initial amount of money
+     *
+     * @param initialSum The initial amount of money to put in this CashRegister
+     */
     public CashRegister(double initialSum) {
         CashRegister.totalSum = initialSum;
     }
@@ -72,7 +77,6 @@ public class CashRegister {
         ShoppingRecord record = new ShoppingRecord(item, amount);
         shoppingList.add(record);
         calcCurrentSum(record);
-
     }
     /** Returns the current customer's shoppingList
      *

@@ -19,7 +19,11 @@ public class ShoppingRecord {
     /******************************************************
      *                      Constructors                  *
      *****************************************************/
-    // Instantiate ShoppingRecord with given Item, amount amd calculate totalPrice of ShoppingRecord
+    /** Instantiate ShoppingRecord with given Item, amount amd calculate totalPrice of ShoppingRecord
+     *
+     * @param item The Item of this ShoppingRecord
+     * @param amount The amount of this ShoppingRecord's Item
+     */
     public ShoppingRecord(Item item, int amount) {
         this.item = item;
         this.amount = amount;
