@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CashRegister/CashRegister.iml" filepath="$PROJECT_DIR$/CashRegister/CashRegister.iml" />
+      <module fileurl="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/Polynom.iml" filepath="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/Polynom.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mmn11.iml" filepath="$PROJECT_DIR$/.idea/mmn11.iml" />
     </modules>
