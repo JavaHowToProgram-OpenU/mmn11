@@ -14,7 +14,6 @@
     <list default="true" id="1a40c875-5336-441a-b8f5-243d55095311" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Polynom/src/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/Polynom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Polynom/src/PolynomDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/PolynomDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Polynom/src/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/Term.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="Term.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+            <state relative-caret-position="480">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -38,8 +37,8 @@
       <file leaf-file-name="Polynom.java" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state relative-caret-position="577">
+              <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -103,8 +102,8 @@
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegister.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/Item.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" />
-        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java" />
         <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java" />
+        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java" />
         <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java" />
       </list>
     </option>
@@ -362,11 +361,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541553733568</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="plus method - halfway">
+      <created>1541605415714</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541605415714</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="-11" width="1863" height="1212" extended-state="6" />
+    <frame x="58" y="-11" width="1863" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -376,7 +382,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="7" visible="true" weight="0.26186132" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="7" visible="true" weight="0.29405737" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32991803" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -418,7 +424,8 @@
     <MESSAGE value="Have user input" />
     <MESSAGE value="Got toString" />
     <MESSAGE value="Really Got toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Really Got toString" />
+    <MESSAGE value="plus method - halfway" />
+    <option name="LAST_COMMIT_MESSAGE" value="plus method - halfway" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
@@ -587,15 +594,15 @@
     </entry>
     <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        <state relative-caret-position="480">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="577">
+          <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
         </state>
       </provider>
     </entry>

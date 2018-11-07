@@ -42,6 +42,10 @@ public class Polynom {
      *                      Methods                       *
      *****************************************************/
 
+    public ArrayList<Term> getTerms() {
+        return terms;
+    }
+
     /** Returns the length of this Polynom(number of terms).
      *
      * @return - The length of this polynom.
@@ -66,11 +70,9 @@ public class Polynom {
         return result;
     }
     public Polynom plus(Polynom p) {
-        // Compare the size of the 2 Polynoms to find the longer one of the 2
-        String longer = (this.getLength() >= p.getLength()) ? "this" : "not-this";
-        // Get length of longer and shorter Polynoms(they might be of the same length)
-        int maxLength = (longer.equals("this")) ? this.getLength() : p.getLength();
-        int minLength = (longer.equals("this")) ? p.getLength() : this.getLength();
+        /* The maximum length of the result Polynom is the sum of elements of the 2 Polynoms - this happens
+            if they have no common powers. */
+        int maxLength = this.getLength() + p.getLength();
         // Create an ArrayList<Term> object for the result Polynom of size maxLength we just found
         ArrayList<Term> resultPolynomTerms = new ArrayList<>(maxLength);
         /* The algorithm goes over the 2 Polynom's terms in sequence, using 2 pointers.
@@ -78,13 +80,56 @@ public class Polynom {
             Otherwise, it copies the element with the larger power.
             After it exhausts the shorter Polynom, it simply copies the rest of the terms from the longer Polynom.
          */
+        int i = 0; // Counter for the result Polynom's terms
         int j = 0; // Counter for this Polynom's terms
-        int k = 0; // Counter for the parameter Polynom's terms.
-        // i is the counter for the result Polynom's terms.
-        for (int i = 0; i < maxLength;) {
-            if (longer.equals("this")) {
-                if ()
+        int k = 0; // Counter for the parameter Polynom's terms
+        // While we haven't exhausted either the result ArrayList or one of the addends
+        while (i < maxLength && j < this.getLength() && k < p.getLength()) {
+            // The power of the terms
+            int thisPower = this.getTerms().get(j).getPower();
+            int pPower = p.getTerms().get(k).getPower();
+            // Powers are equal - add the coefficients
+            if (thisPower == pPower) {
+                // The coefficients to add together
+                double thisCoefficient = this.getTerms().get(j).getCoefficient();
+                double pCoefficient = p.getTerms().get(k).getCoefficient();
+                double resultcoefficient = thisCoefficient + pCoefficient;
+                // We ignore terms with a coefficient of 0
+                if (resultcoefficient != 0) {
+                    resultPolynomTerms.add(new Term((resultcoefficient, thisPower));
+                }
+                // Advance all counters to the next term
+                ++i;
+                ++j;
+                ++k;
+            }
+            // pPower is greater, so add it's element and advance k
+            else if (thisPower < pPower) {
+                resultPolynomTerms.add(new Term(p.terms.get(k)));
+                ++i;
+                ++k;
+            }
+            // thisPower greater, so add it's element and advance j
+            else {
+                resultPolynomTerms.add(new Term(this.terms.get(j)));
+                ++i;
+                ++j;
             }
         }
+        // We exhausted this polynom, so finish copying the rest of p to the result
+        if (j == this.getLength()) {
+            while (k < p.getLength()) {
+                resultPolynomTerms.add(new Term(p.terms.get(k)));
+                ++k;
+            }
+        }
+        // We exhausted the parameter polynom, so finish copying the rest of this polynom to the result
+        else if (k == p.getLength()) {
+            while (j < this.getLength()) {
+                resultPolynomTerms.add(new Term(p.terms.get(j)));
+                ++j;
+            }
+        }
+        return new Polynom(resultPolynomTerms);
     }
 }

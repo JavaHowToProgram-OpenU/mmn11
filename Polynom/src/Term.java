@@ -29,6 +29,18 @@ public class Term {
         this.power = power;
     }
 
+    /** A copy constructor. This constructor receives a Term object and creates a new Term object from it.
+     *
+     * @param term The Term object to copy.
+     */
+    public Term(Term term) {
+        this.coefficient = term.coefficient;
+        this.power = term.power;
+    }
+    /******************************************************
+     *                      Methods                       *
+     *****************************************************/
+
     public double getCoefficient() {
         return coefficient;
     }
