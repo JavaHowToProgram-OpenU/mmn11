@@ -41,10 +41,12 @@ public class PolynomDriver {
             if (polynomNumber == 1) {
                 Polynom polynom1 = new Polynom(coefficientsArray, powersArray);
                 System.out.println(polynom1);
+                System.out.println("size = " + polynom1.getLength());
             }
             else {
                 Polynom polynom2 = new Polynom(coefficientsArray, powersArray);
                 System.out.println(polynom2);
+                System.out.println("size = " + polynom2.getLength());
             }
             // Clean powers and coefficients ArrayLists for next Polynom
             powers.clear();

@@ -69,9 +69,6 @@ public class Term {
         else {
             result += "^" + power;
         }
-        /*return  ((abs(coefficient) == 1.0) ?  "" : Double.toString(coefficient)) + // Don't write coefficient if it's a 1
-                ((power == 0 || coefficient == 0) ? "" : "x") + // If power or coefficient are 0, don't show variable
-                ((power <= 1)?  "" : ("^" + power)); // If power is 1 or 0, don't show power*/
         return result;
     }
 }

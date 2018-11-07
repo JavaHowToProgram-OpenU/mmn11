@@ -32,6 +32,23 @@ public class Polynom {
         }
     }
 
+    /** A constructor to instantiate a new Polynom using an ArrayList of Terms.
+     * @param terms The Terms ArrayList to create the Polynom from
+     */
+    public Polynom(ArrayList<Term> terms) {
+        this.terms = terms;
+    }
+    /******************************************************
+     *                      Methods                       *
+     *****************************************************/
+
+    /** Returns the length of this Polynom(number of terms).
+     *
+     * @return - The length of this polynom.
+     */
+    public int getLength() {
+        return this.terms.size();
+    }
     /** Returns a string representation of this Polynom.
      * @return - this Polynom in the standard form
      */
@@ -47,5 +64,27 @@ public class Polynom {
             }
         }
         return result;
+    }
+    public Polynom plus(Polynom p) {
+        // Compare the size of the 2 Polynoms to find the longer one of the 2
+        String longer = (this.getLength() >= p.getLength()) ? "this" : "not-this";
+        // Get length of longer and shorter Polynoms(they might be of the same length)
+        int maxLength = (longer.equals("this")) ? this.getLength() : p.getLength();
+        int minLength = (longer.equals("this")) ? p.getLength() : this.getLength();
+        // Create an ArrayList<Term> object for the result Polynom of size maxLength we just found
+        ArrayList<Term> resultPolynomTerms = new ArrayList<>(maxLength);
+        /* The algorithm goes over the 2 Polynom's terms in sequence, using 2 pointers.
+            When it finds similar powers, it adds the coefficients and puts the resulting Term in resultPolynomTerms.
+            Otherwise, it copies the element with the larger power.
+            After it exhausts the shorter Polynom, it simply copies the rest of the terms from the longer Polynom.
+         */
+        int j = 0; // Counter for this Polynom's terms
+        int k = 0; // Counter for the parameter Polynom's terms.
+        // i is the counter for the result Polynom's terms.
+        for (int i = 0; i < maxLength;) {
+            if (longer.equals("this")) {
+                if ()
+            }
+        }
     }
 }
