@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a40c875-5336-441a-b8f5-243d55095311" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,29 +24,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Polynom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Term.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+            <state relative-caret-position="472">
+              <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PolynomDriver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Polynom.java" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PolynomDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+            <state relative-caret-position="309">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,11 +54,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CashRegister.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="CashRegisterDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="7" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +136,9 @@
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegister.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/Item.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" />
-        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java" />
         <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java" />
+        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java" />
+        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java" />
       </list>
     </option>
   </component>
@@ -342,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541543799052</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Have user input">
+      <created>1541545762485</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1541545762485</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -395,7 +427,8 @@
     <MESSAGE value="Almost done with Q1" />
     <MESSAGE value="Starts Q2" />
     <MESSAGE value="Array sorting done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Array sorting done" />
+    <MESSAGE value="Have user input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Have user input" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
@@ -516,27 +549,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/../CashRegister/production/CashRegister/CashRegisterDriver.class" />
-    <entry file="file://$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Polynom/src/Term.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -546,37 +558,54 @@
     <entry file="file://$PROJECT_DIR$/../Polynom/src/Polynom.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
+    <entry file="file://$PROJECT_DIR$/../CashRegister/src/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../CashRegister/src/ShoppingRecord.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="7" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CashRegister/src/CashRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        <state relative-caret-position="309">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/** mmn11-1b
+ * Driver class for the CashRegister program
+ * @author Gad Maor
+ * @version 1.0
+ */
 public class CashRegisterDriver {
     public static void main(String[] args) {
         // ArrayList representing the current customer's shopping list(account).
