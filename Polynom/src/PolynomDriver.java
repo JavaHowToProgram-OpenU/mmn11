@@ -15,25 +15,42 @@ public class PolynomDriver {
         Scanner input = new Scanner(System.in);
         printWelcomeScreen();
         // Get coefficients and powers from user and create Polynom objects
-        for (int polynomNumber = 1; polynomNumber < 2; ++polynomNumber) {
+        for (int polynomNumber = 1; polynomNumber < 3; ++polynomNumber) {
             printGetPolynomMessage(polynomNumber);
-            double coefficient = input.nextDouble();
-            int power = input.nextInt();
-            while (power >= 0) {
-                coefficients.add(new Double(coefficient));
-                powers.add(new Integer(power));
+            int power = 0;
+            double coefficient = 0;
+            do  {
                 coefficient = input.nextDouble();
                 power = input.nextInt();
+                // We ignore terms with coefficient 0
+                if (coefficient == 0 || power < 0){
+                    // Flush Scanner's input buffer
+                    input.nextLine();
+                    continue;
+                }
+                coefficients.add(new Double(coefficient));
+                powers.add(new Integer(power));
+            } while (power >= 0);
+            // Convert the ArrayLists to Integer and Double arrays for sorting
+            Integer powersArray[] = new Integer[powers.size()];
+            powers.toArray(powersArray);
+            Double[] coefficientsArray = new Double[coefficients.size()];
+            coefficients.toArray(coefficientsArray);
+            // Sorts the powers and coefficients arrays by ascending powers
+            bubbleSortByPowerDescending(powersArray, coefficientsArray);
+            if (polynomNumber == 1) {
+                Polynom polynom1 = new Polynom(coefficientsArray, powersArray);
+                System.out.println(polynom1);
             }
+            else {
+                Polynom polynom2 = new Polynom(coefficientsArray, powersArray);
+                System.out.println(polynom2);
+            }
+            // Clean powers and coefficients ArrayLists for next Polynom
+            powers.clear();
+            coefficients.clear();
         }
-        // Convert the ArrayLists to Integer and Double arrays for sorting
-        Integer powersArray[] = new Integer[powers.size()];
-        powers.toArray(powersArray);
-        Double[] coefficientsArray = new Double[coefficients.size()];
-        coefficients.toArray(coefficientsArray);
-        bubbleSortByPowerDescending(powersArray, coefficientsArray);
-        Polynom polynom = new Polynom(coefficientsArray, powersArray);
-        System.out.println(polynom);
+
         /*for (Integer item : powersArray) {
             System.out.printf("%d ", item);
         }
@@ -64,7 +81,7 @@ public class PolynomDriver {
         System.out.println("Please input 2 polynomials, one element per line in the form: coefficient<space>power.\n");
     }
     public static void printGetPolynomMessage(int polynomNumber) {
-        System.out.println( "Enter polynom number " + polynomNumber + "(Enter any coefficient and a negative power" +
-                            " to mark end of input):");
+        System.out.println( "Enter polynom number " + polynomNumber + "(Enter any non-zero coefficient " +
+                            "and a negative power to mark end of input):");
     }
 }

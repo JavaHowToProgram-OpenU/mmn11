@@ -1,3 +1,5 @@
+import static java.lang.Math.*;
+
 /**
  * Represents a single term of a polynom.
  * @author Gad Maor
@@ -44,8 +46,32 @@ public class Term {
     }
 
     public String toString() {
-        return  ((coefficient == 1) ?  "" : Double.toString(coefficient)) + // Don't write coefficient if it's a 1
+        String result = "";
+        // Coefficient is -1.0, 1.0 or 0 - don't print it
+        if (abs(getCoefficient()) == 1.0 || getCoefficient() == 0) {
+            ;
+        }
+        else {
+            result += Double.toString(coefficient);
+        }
+        // If power or coefficient are 0, don't show variable
+        if (power == 0 || coefficient == 0) {
+            ;
+        }
+        // Print the 'x' variable
+        else {
+            result += "x";
+        }
+        // If power is 1 or 0, don't show power
+        if (power <= 1) {
+            ;
+        }
+        else {
+            result += "^" + power;
+        }
+        /*return  ((abs(coefficient) == 1.0) ?  "" : Double.toString(coefficient)) + // Don't write coefficient if it's a 1
                 ((power == 0 || coefficient == 0) ? "" : "x") + // If power or coefficient are 0, don't show variable
-                ((power <= 1)?  "" : ("^" + power)); // If power is 1 or 0, don't show power
+                ((power <= 1)?  "" : ("^" + power)); // If power is 1 or 0, don't show power*/
+        return result;
     }
 }
