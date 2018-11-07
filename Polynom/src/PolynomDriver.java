@@ -13,6 +13,8 @@ public class PolynomDriver {
         ArrayList<Double>  coefficients = new ArrayList<>();
         // create a Scanner to obtain input from the user
         Scanner input = new Scanner(System.in);
+        Polynom polynom1, polynom2;
+        polynom1 = polynom2 = null;
         printWelcomeScreen();
         // Get coefficients and powers from user and create Polynom objects
         for (int polynomNumber = 1; polynomNumber < 3; ++polynomNumber) {
@@ -39,12 +41,12 @@ public class PolynomDriver {
             // Sorts the powers and coefficients arrays by ascending powers
             bubbleSortByPowerDescending(powersArray, coefficientsArray);
             if (polynomNumber == 1) {
-                Polynom polynom1 = new Polynom(coefficientsArray, powersArray);
+                polynom1 = new Polynom(coefficientsArray, powersArray);
                 System.out.println(polynom1);
                 System.out.println("size = " + polynom1.getLength());
             }
             else {
-                Polynom polynom2 = new Polynom(coefficientsArray, powersArray);
+                polynom2 = new Polynom(coefficientsArray, powersArray);
                 System.out.println(polynom2);
                 System.out.println("size = " + polynom2.getLength());
             }
@@ -52,6 +54,11 @@ public class PolynomDriver {
             powers.clear();
             coefficients.clear();
         }
+        System.out.println("The sum of the 2 polynoms is:");
+        System.out.println(polynom1.plus(polynom2));
+
+        System.out.println("The difference of the 2 polynoms is:");
+        System.out.println(polynom1.minus(polynom2));
 
         /*for (Integer item : powersArray) {
             System.out.printf("%d ", item);

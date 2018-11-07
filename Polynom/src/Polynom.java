@@ -38,6 +38,14 @@ public class Polynom {
     public Polynom(ArrayList<Term> terms) {
         this.terms = terms;
     }
+
+    /** A copy constructor to create a new polynom from a given Polynom p.
+     *
+     * @param p The Polynom to copy
+     */
+    public Polynom(Polynom p) {
+        this.terms = p.terms;
+    }
     /******************************************************
      *                      Methods                       *
      *****************************************************/
@@ -58,7 +66,16 @@ public class Polynom {
      */
     public String toString() {
         String result = "";
+        // Variable for testing a special case - zero polynom
+        boolean zeroFlag = true;
         for (int i = 0; i < terms.size(); ++i) {
+            if (terms.get(i).getCoefficient() != 0) {
+                zeroFlag = false;
+            }
+            // Skip over terms with coefficient 0
+            else {
+                continue;
+            }
             // don't add a sign for a negative element or the 1st element
             if (i == 0 || terms.get(i).getCoefficient() < 0) {
                 result += terms.get(i);
@@ -67,19 +84,23 @@ public class Polynom {
                 result += "+" + terms.get(i);
             }
         }
-        return result;
+        return (zeroFlag) ? "0" : result;
     }
+
+    /** Returns the sum of this Polynom and the parameter as a new Polynom.
+     * The algorithm goes over the 2 Polynom's terms in sequence, using 2 pointers.
+     * When it finds similar powers, it adds the coefficients and puts the resulting Term in resultPolynomTerms.
+     * Otherwise, it copies the element with the larger power.
+     * After it exhausts the shorter Polynom, it simply copies the rest of the terms from the longer Polynom.
+     * @param p The polynom to add to this polynom
+     * @return - The result of adding the 2 polynoms as a new Polynom.
+     */
     public Polynom plus(Polynom p) {
         /* The maximum length of the result Polynom is the sum of elements of the 2 Polynoms - this happens
             if they have no common powers. */
         int maxLength = this.getLength() + p.getLength();
         // Create an ArrayList<Term> object for the result Polynom of size maxLength we just found
         ArrayList<Term> resultPolynomTerms = new ArrayList<>(maxLength);
-        /* The algorithm goes over the 2 Polynom's terms in sequence, using 2 pointers.
-            When it finds similar powers, it adds the coefficients and puts the resulting Term in resultPolynomTerms.
-            Otherwise, it copies the element with the larger power.
-            After it exhausts the shorter Polynom, it simply copies the rest of the terms from the longer Polynom.
-         */
         int i = 0; // Counter for the result Polynom's terms
         int j = 0; // Counter for this Polynom's terms
         int k = 0; // Counter for the parameter Polynom's terms
@@ -94,10 +115,7 @@ public class Polynom {
                 double thisCoefficient = this.getTerms().get(j).getCoefficient();
                 double pCoefficient = p.getTerms().get(k).getCoefficient();
                 double resultcoefficient = thisCoefficient + pCoefficient;
-                // We ignore terms with a coefficient of 0
-                if (resultcoefficient != 0) {
-                    resultPolynomTerms.add(new Term((resultcoefficient, thisPower));
-                }
+                resultPolynomTerms.add(new Term(resultcoefficient, thisPower));
                 // Advance all counters to the next term
                 ++i;
                 ++j;
@@ -126,10 +144,28 @@ public class Polynom {
         // We exhausted the parameter polynom, so finish copying the rest of this polynom to the result
         else if (k == p.getLength()) {
             while (j < this.getLength()) {
-                resultPolynomTerms.add(new Term(p.terms.get(j)));
+                resultPolynomTerms.add(new Term(this.terms.get(j)));
                 ++j;
             }
         }
         return new Polynom(resultPolynomTerms);
+    }
+
+    /** Returns the sum of this Polynom and the parameter as a new Polynom.
+     *  Creates a copy of the give Polynom, multiplies each of it's Terms by (-1)
+     *  and uses the plus method to add the result to this Polynom
+     *
+     * @param p The Polynom to subtract from this Polynom
+     * @return The result of subtracting p from this Polynom
+     */
+    public Polynom minus(Polynom p) {
+        Polynom minusP = new Polynom(p);
+        for (Term term : minusP.getTerms()) {
+            term.setCoefficient(-1 * term.getCoefficient());
+        }
+        return this.plus(minusP);
+    }
+    public Polynom derivate() {
+
     }
 }

@@ -59,12 +59,16 @@ public class Term {
 
     public String toString() {
         String result = "";
-        // Coefficient is -1.0, 1.0 or 0 - don't print it
-        if (abs(getCoefficient()) == 1.0 || getCoefficient() == 0) {
+        // Coefficient is 1.0 or 0 - don't print it
+        if (getCoefficient() == 1.0 || getCoefficient() == 0) {
             ;
         }
+        // Coefficient is -1.0, just print minus sign
+        else if (getCoefficient() == -1.0) {
+            result += "-";
+        }
         else {
-            result += Double.toString(coefficient);
+            result += String.format("%.1f", coefficient);
         }
         // If power or coefficient are 0, don't show variable
         if (power == 0 || coefficient == 0) {
