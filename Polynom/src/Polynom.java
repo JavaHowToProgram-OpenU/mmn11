@@ -36,7 +36,10 @@ public class Polynom {
      * @param terms The Terms ArrayList to create the Polynom from
      */
     public Polynom(ArrayList<Term> terms) {
-        this.terms = terms;
+        this.terms = new ArrayList<>(terms.size());
+        for (int i = 0; i < terms.size(); ++i) {
+            this.terms.add(new Term(terms.get(i)));
+        }
     }
 
     /** A copy constructor to create a new polynom from a given Polynom p.
@@ -44,7 +47,10 @@ public class Polynom {
      * @param p The Polynom to copy
      */
     public Polynom(Polynom p) {
-        this.terms = p.terms;
+        this.terms = new ArrayList<>(p.getLength());
+        for (int i = 0; i < p.getLength(); ++i) {
+            this.terms.add(new Term(p.getTerms().get(i)));
+        }
     }
     /******************************************************
      *                      Methods                       *
@@ -165,7 +171,18 @@ public class Polynom {
         }
         return this.plus(minusP);
     }
+    /** Returns the derivative of this Polynom.
+     *
+     * @return This Polynom's derivative.
+     */
     public Polynom derivate() {
-
+        Polynom derivativeP = new Polynom(this);
+        for (Term term : derivativeP.getTerms()) {
+            double newCoefficient = term.getPower() * term.getCoefficient();
+            int newPower = term.getPower() - 1;
+            term.setCoefficient(newCoefficient);
+            term.setPower(newPower);
+        }
+        return derivativeP;
     }
 }

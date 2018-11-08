@@ -42,23 +42,29 @@ public class PolynomDriver {
             bubbleSortByPowerDescending(powersArray, coefficientsArray);
             if (polynomNumber == 1) {
                 polynom1 = new Polynom(coefficientsArray, powersArray);
-                System.out.println(polynom1);
-                System.out.println("size = " + polynom1.getLength());
+                System.out.println("The 1st polynom is: " + "p = " + polynom1);
             }
             else {
                 polynom2 = new Polynom(coefficientsArray, powersArray);
-                System.out.println(polynom2);
-                System.out.println("size = " + polynom2.getLength());
+                System.out.println("The 2nd polynom is: " + "q = " + polynom2);
             }
             // Clean powers and coefficients ArrayLists for next Polynom
             powers.clear();
             coefficients.clear();
         }
-        System.out.println("The sum of the 2 polynoms is:");
-        System.out.println(polynom1.plus(polynom2));
+        System.out.print("\nThe sum of the 2 polynoms is:\np + q = ");
+        System.out.println("(" + polynom1 + ")" + " + " +
+                           "(" + polynom2 + ")" + " =\n= " + polynom1.plus(polynom2));
 
-        System.out.println("The difference of the 2 polynoms is:");
-        System.out.println(polynom1.minus(polynom2));
+        System.out.print("\nThe difference of the 2 polynoms is:\np - q = ");
+        System.out.println("(" + polynom1 + ")" + " - " +
+                "(" + polynom2 + ")" + " =\n= " + polynom1.minus(polynom2));
+
+        System.out.println("\nThe derivative of the 1st polynom is:");
+        System.out.println("p' = " + "(" + polynom1 + ")` =\n = " + polynom1.derivate());
+
+        System.out.println("\nThe derivative of the 2nd polynom is:");
+        System.out.println("q' = " + "(" + polynom2 + ")` =\n = " + polynom2.derivate());
 
         /*for (Integer item : powersArray) {
             System.out.printf("%d ", item);

@@ -59,30 +59,31 @@ public class Term {
 
     public String toString() {
         String result = "";
-        // Coefficient is 1.0 or 0 - don't print it
-        if (getCoefficient() == 1.0 || getCoefficient() == 0) {
-            ;
+        // First decide whether or not to print coefficient
+        // Coefficient is 1.0 - don't print it
+        if (getCoefficient() == 1.0) {
+            if (power == 0) {
+                result += String.format("%.1f", coefficient);
+            }
         }
         // Coefficient is -1.0, just print minus sign
         else if (getCoefficient() == -1.0) {
-            result += "-";
+            if (power > 0) {
+                result += "-";
+            }
+            else {
+                result += String.format("%.1f", coefficient);
+            }
         }
         else {
             result += String.format("%.1f", coefficient);
         }
-        // If power or coefficient are 0, don't show variable
-        if (power == 0 || coefficient == 0) {
-            ;
-        }
         // Print the 'x' variable
-        else {
+        if (power > 0) {
             result += "x";
         }
         // If power is 1 or 0, don't show power
-        if (power <= 1) {
-            ;
-        }
-        else {
+        if (power > 1 ) {
             result += "^" + power;
         }
         return result;
