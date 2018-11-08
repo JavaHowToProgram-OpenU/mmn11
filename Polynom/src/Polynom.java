@@ -5,13 +5,13 @@ import java.util.ArrayList;
  * @author Gad Maor
  * @version 1.0
  */
-public class Polynom {
+public class Polynom implements Comparable<Polynom>{
 
     /******************************************************
      *                      Fields                        *
      *****************************************************/
     // An ArrayList whose elements are the Terms of this polynom
-    ArrayList<Term> terms;
+    private ArrayList<Term> terms;
 
     /******************************************************
      *                      Constructors                  *
@@ -162,7 +162,7 @@ public class Polynom {
      *  and uses the plus method to add the result to this Polynom
      *
      * @param p The Polynom to subtract from this Polynom
-     * @return The result of subtracting p from this Polynom
+     * @return - The result of subtracting p from this Polynom
      */
     public Polynom minus(Polynom p) {
         Polynom minusP = new Polynom(p);
@@ -184,5 +184,49 @@ public class Polynom {
             term.setPower(newPower);
         }
         return derivativeP;
+    }
+
+    /** Compares this Polynom to p. Returns 0 if they are equal(in all powers and coefficients),
+     *  1 if this Polynom is greater than p and -1 if p is greater than this Polynom.
+     *  The comparison is based on the following rules:
+     *  1. A Polynom is lower than a Polynom with a non zero coefficient of a higher power.
+     *  2. If the powers are equal, a Polynom is lower based on the lower of the largest coefficient that is different.
+     *  3. If the number of coefficients and all the coefficients of each power are the same, the polynomials are equal.
+     *
+     * @param p The Polynom to compare this Polynom to.
+     * @return - 0 if Polynoms are equal. -1 if p is greater than this Polynom. 1 if this Polynom is greater.
+     */
+    public int compareTo (Polynom p) {
+        // Counter for this Polynom
+        int i = 0;
+        // Counter for p.
+        int j = 0;
+        while (i < this.getLength() && j < p.getLength()) {
+            double thisCurrentTermCoefficient = this.getTerms().get(i).getCoefficient();
+            double pCurrentTermCoefficient = p.getTerms().get(j).getCoefficient();
+            int thisCurrentTermPower = this.getTerms().get(i).getPower();
+            int pCurrentTermPower = p.getTerms().get(j).getPower();
+            if (thisCurrentTermPower < pCurrentTermPower) {
+                return -1;
+            }
+            else if (thisCurrentTermPower > pCurrentTermPower) {
+                return 1;
+            }
+            else {
+                if (thisCurrentTermCoefficient < pCurrentTermCoefficient) {
+                    return -1;
+                }
+                else if (thisCurrentTermCoefficient > pCurrentTermCoefficient) {
+                    return 1;
+                }
+                // Both powers and coefficients are equal - proceed to next term
+                else {
+                    ++i;
+                    ++j;
+                }
+            }
+        }
+        // If we've reached here - it means that all powers and all coefficients are equal => the Polynoms are equal
+        return 0;
     }
 }

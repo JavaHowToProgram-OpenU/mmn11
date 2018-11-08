@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Polynom/src/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/Polynom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Polynom/src/PolynomDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/PolynomDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Polynom/src/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Polynom/src/Term.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Term.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Term.java" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+            <state relative-caret-position="112">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Polynom.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Polynom.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -47,8 +46,8 @@
       <file leaf-file-name="PolynomDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state relative-caret-position="502">
+              <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,11 +72,13 @@
       <find>[j + 1]</find>
       <find>Ascending</find>
       <find>i</find>
+      <find>polynomial</find>
     </findStrings>
     <replaceStrings>
       <replace>powers</replace>
       <replace>.get(j + 1)</replace>
       <replace>Descending</replace>
+      <replace>Polynom</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -104,9 +105,9 @@
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegister.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/Item.java" />
         <option value="$PROJECT_DIR$/../CashRegister/src/CashRegisterDriver.java" />
+        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java" />
         <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java" />
         <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java" />
-        <option value="$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java" />
       </list>
     </option>
   </component>
@@ -384,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541627542140</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adding some Javadoc">
+      <created>1541670458205</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541670458205</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,7 +451,8 @@
     <MESSAGE value="plus method - halfway" />
     <MESSAGE value="plus method - done?" />
     <MESSAGE value="plus and minus methods done" />
-    <option name="LAST_COMMIT_MESSAGE" value="plus and minus methods done" />
+    <MESSAGE value="Adding some Javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some Javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,8 +463,14 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -624,10 +639,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/PolynomDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="502">
+          <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -636,15 +658,8 @@
     </entry>
     <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Term.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OpenU/AdvancedJava/mmn11/Polynom/src/Polynom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
+        <state relative-caret-position="112">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
         </state>
       </provider>
     </entry>
